@@ -155,6 +155,18 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "Display"))
         self.label_4.setText(_translate("MainWindow", "Search by"))
         self.label_5.setText(_translate("MainWindow", "A simple sorting application"))
+
+        def Openfile(self):
+            try:
+                self.all_data = pd.read_csv('laptops.csv')
+            except:
+                print("Error Occurs")
+
+        def dataHead(self):
+            numrows = len(self.all_data.index)
+            self.tableWidget.setColumnCount(len(self.all_data.columns))
+            self.tableWidget.setRowCount(len(numRows))
+            self.tableWidget.setHorizontalHeaderItem(len(self.all_data.columns))
 import test_rc
 
 
