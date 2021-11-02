@@ -208,6 +208,7 @@ color: rgb(255, 85, 0);</string>
      <bool>true</bool>
     </property>
    </widget>
+<<<<<<< Updated upstream
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
@@ -221,6 +222,8 @@ color: rgb(255, 85, 0);</string>
      <string>Describe</string>
     </property>
    </widget>
+=======
+>>>>>>> Stashed changes
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
