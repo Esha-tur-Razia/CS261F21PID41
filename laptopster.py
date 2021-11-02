@@ -126,6 +126,43 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.setWindowTitle("Python ")
+
+        # setting geometry
+        self.setGeometry(100, 100, 600, 400)
+
+        # calling method
+        self.UiComponents()
+
+        # showing all the widgets
+        self.show()
+
+        # method for widgets
+
+    def UiComponents(self):
+
+        # creating a push button
+        button = QPushButton("CLICK", self)
+
+        # setting geometry of button
+        button.setGeometry(200, 150, 100, 30)
+
+        # adding action to a button
+        button.clicked.connect(self.Load data)
+
+        # action method
+
+    def clickme(self):
+
+        # printing pressed
+        print("pressed")
+
+    # create pyqt5 app
+    App = QApplication(sys.argv)
+    window = Window()
+
+    # start the app
+    sys.exit(App.exec())
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -263,7 +300,7 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "Core"))
         item = self.tableWidget.horizontalHeaderItem(6)
         item.setText(_translate("MainWindow", "Display"))
-        self.label_4.setText(_translate("MainWindow", "Search by"))
+        self.label_4.setText(_translate("MainWindow", "Search by"))s
         self.label_5.setText(_translate("MainWindow", "A simple sorting application"))
 
         def Openfile(self):
