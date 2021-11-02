@@ -215,8 +215,36 @@ class Ui_MainWindow(object):
         self.combo_box.activated.connect(countingsort)
 
         # method called by combo box
-        def insertionsort(self):
-            print(Insertionsort)
+
+
+         import random, math
+         def getKey(n):
+         return n
+
+
+        def countingSort(list, k, getKey,self):
+            count = [0] * k
+
+
+            for n in list
+                count[getKey(n)] = count[getKey(n)] + 1
+                for i in range(k)
+                   if i == 0:
+                      count[i] = count[i]
+                   else:
+                      count[i] += count[i - 1]
+                      output = [None] * len(list)
+                for i in range(len(list) - 1, -1, -1)
+                    sortkey = getKey(list[i])
+                    output[count[sortkey] - 1] = list[i]
+                    count[sortkey] -= 1
+                    return output
+                    random.seed(0)
+                    arr = [random.randint(0, 20) for n in range(10)]
+                    print("Unsorted array")
+                    print(arr)
+
+          print(countingsort)
         self.comboBox_2.setItemText(0, _translate("MainWindow", "Ascending"))
         self.comboBox_2.setItemText(1, _translate("MainWindow", "Decending"))
         self.label_2.setText(_translate("MainWindow", "Select algorithm"))
