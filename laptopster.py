@@ -132,9 +132,39 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label.setText(_translate("MainWindow", "Laptopster"))
         self.comboBox.setItemText(0, _translate("MainWindow", "Insertion-sort"))
+        self.combo_box.activated.connect(insertionsort)
+        # method called by combo box
+        def insertionsort(self):
+
+            print(Insertionsort)
         self.comboBox.setItemText(1, _translate("MainWindow", "Merge-sort"))
+        self.combo_box.activated.connect(insertionsort)
+
+        # method called by combo box
+        def insertionsort(self):
+            print(Insertionsort)
         self.comboBox.setItemText(2, _translate("MainWindow", "bubble-sort"))
+        self.combo_box.activated.connect(bubblesort)
+
+        # method called by combo box
+        def bubblesort(self,arr):
+
+            for i in range(len(arr) - 1):
+                 min = i
+                for j in range(i + 1, len(arr)):
+                    if (arr[j] < arr[min]):
+                         min = j
+                    if (min != i):
+                        arr[i], arr[min] = arr[min], arr[i]
+                return arr
+
+            print(bubblesort)
         self.comboBox.setItemText(3, _translate("MainWindow", "Counting-sort"))
+        self.combo_box.activated.connect(countingsort)
+
+        # method called by combo box
+        def insertionsort(self):
+            print(Insertionsort)
         self.comboBox_2.setItemText(0, _translate("MainWindow", "Ascending"))
         self.comboBox_2.setItemText(1, _translate("MainWindow", "Decending"))
         self.label_2.setText(_translate("MainWindow", "Select algorithm"))
@@ -158,7 +188,7 @@ class Ui_MainWindow(object):
 
         def Openfile(self):
             try:
-                self.all_data = pd.read_csv('laptops.csv')
+                self.all_data = pd.read_csv(E:\Sana\CS261F21PID41\laptops.csv)
             except:
                 print("Error Occurs")
 
@@ -167,6 +197,7 @@ class Ui_MainWindow(object):
             self.tableWidget.setColumnCount(len(self.all_data.columns))
             self.tableWidget.setRowCount(len(numRows))
             self.tableWidget.setHorizontalHeaderItem(len(self.all_data.columns))
+
 import test_rc
 
 
