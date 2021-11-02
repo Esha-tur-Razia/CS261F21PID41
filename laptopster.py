@@ -155,8 +155,46 @@ class Ui_MainWindow(object):
         self.combo_box.activated.connect(mergesort)
 
         # method called by combo box
-        def insertionsort(self):
-            print(Insertionsort)
+
+
+        def Merge_Sort(arr,self):
+             first = []
+             second = []
+            if len(arr) > 1:
+               mid = len(arr) // 2
+               first = arr[:mid]
+               second = arr[mid:]
+               Merge_Sort(first)
+               Merge_Sort(second)
+               i = 0
+               j = 0
+               k = 0
+        while i < len(first) and j < len(second):
+            if first[i] < second[j]:
+                arr[k] = first[i]
+                i = i + 1
+            else:
+                 arr[k] = second[j]
+                 j = j + 1
+                 k = k + 1
+
+        while i < len(first):
+              arr[k] = first[i]
+              i = i + 1
+              k = k + 1
+
+        while j < len(second):
+              arr[k] = second[j]
+              j = j + 1
+              k = k + 1
+
+
+        def print_List(arr):
+            for i in range(len(arr)):
+                print(arr[i], end=" ")
+
+        print(mergesort)
+
         self.comboBox.setItemText(2, _translate("MainWindow", "bubble-sort"))
         self.combo_box.activated.connect(bubblesort)
 
