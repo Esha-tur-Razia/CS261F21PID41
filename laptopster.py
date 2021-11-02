@@ -134,11 +134,25 @@ class Ui_MainWindow(object):
         self.comboBox.setItemText(0, _translate("MainWindow", "Insertion-sort"))
         self.combo_box.activated.connect(insertionsort)
         # method called by combo box
-        def insertionsort(self):
 
-            print(Insertionsort)
+            def insertionsort(arr,self):
+                # for loop iteration in python from j to the length of array
+                j = 1
+                for j in range(len(arr)):
+                    key = arr[j]
+                    i = j - 1
+                while i > 0 and arr[i] < key:
+                    arr[i + 1] = arr[i]
+                    i = i - 1
+                arr[i + 1] = key
+
+            def print_List(arr):
+                for i in range(len(arr)):
+                    print(arr[i], end=" ")
+
+            print(insertionsort)
         self.comboBox.setItemText(1, _translate("MainWindow", "Merge-sort"))
-        self.combo_box.activated.connect(insertionsort)
+        self.combo_box.activated.connect(mergesort)
 
         # method called by combo box
         def insertionsort(self):
