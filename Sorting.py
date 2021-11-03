@@ -72,7 +72,7 @@ class Ui_MainWindow(object):
         self.tableWidget.setObjectName("tableWidget")
         self.tableWidget.setColumnCount(6)
         self.tableWidget.setRowCount(6)
-        """
+        
         item = QtWidgets.QTableWidgetItem()
         
         self.tableWidget.setVerticalHeaderItem(0, item)
@@ -98,7 +98,7 @@ class Ui_MainWindow(object):
         self.tableWidget.setHorizontalHeaderItem(4, item)
         item = QtWidgets.QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(5, item)
-        """
+        
         self.progressBar = QtWidgets.QProgressBar(self.centralwidget)
         self.progressBar.setGeometry(QtCore.QRect(580, 30, 141, 23))
         self.progressBar.setProperty("value", 24)
@@ -144,7 +144,7 @@ class Ui_MainWindow(object):
         self.comboBox_2.setItemText(1, _translate("MainWindow", "Decending"))
         self.pushButton.setText(_translate("MainWindow", "Load"))
         item = self.tableWidget.horizontalHeaderItem(0)
-        """
+        
         item.setText(_translate("MainWindow", "Price"))
         item = self.tableWidget.horizontalHeaderItem(1)
         item.setText(_translate("MainWindow", "Laptops"))
@@ -157,12 +157,12 @@ class Ui_MainWindow(object):
         item = self.tableWidget.horizontalHeaderItem(5)
         
         item.setText(_translate("MainWindow", "Display"))
-        """
+        
         self.label_4.setText(_translate("MainWindow", "Search by"))
         self.comboBox_3.setItemText(0, _translate("MainWindow", "Linear search"))
         self.comboBox_3.setItemText(1, _translate("MainWindow", "Binary search"))
         self.pushButton.clicked.connect(self.Openfile)
-
+        
     def Openfile(self):
         try:
             self.all_data = pd.read_csv("laptopData.csv")
