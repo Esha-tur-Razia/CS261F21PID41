@@ -305,7 +305,8 @@ class Ui_MainWindow(object):
 
         def Openfile(self):
             try:
-                self.all_data = pd.read_csv(E:\Sana\CS261F21PID41\laptops.csv)
+                self.all_data = pd.read_csv(laptops.csv)
+
             except:
                 print("Error Occurs")
 
@@ -314,6 +315,12 @@ class Ui_MainWindow(object):
             self.tableWidget.setColumnCount(len(self.all_data.columns))
             self.tableWidget.setRowCount(len(numRows))
             self.tableWidget.setHorizontalHeaderItem(len(self.all_data.columns))
+            for i in range(numrows):
+                     for j in range(len(self.all_data.columns)):
+                         self.tableWidget.setItem(len(i,j,QTableWidget(str(self.all_data.iat[i,j])))
+
+            self.tableWidget.resizeColumnToContents()
+            self.tableWidget.resizeRowsToContents()
 
 import test_rc
 
